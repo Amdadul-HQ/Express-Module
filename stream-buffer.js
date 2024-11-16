@@ -13,6 +13,10 @@ server.on("request",(req,res)=>{
         reabAbleStreamData.on("end",()=>{
             res.end("Hello From Node.js")
         })
+        reabAbleStreamData.on("error",(error)=>{
+            res.statusCode(500)
+            res.end("something want wrong")
+        })
     }
 })
 
