@@ -1,9 +1,11 @@
 const fs = require('fs');
-// Read File
-const readText = fs.readFileSync("./texts/read.txt","utf-8")
+
+// Read text
+const readText= fs.readFileSync("./texts/read.txt","utf-8")
+
 console.log(readText);
 
-// write File
-const writetext = fs.writeFileSync("./texts/writeText.txt",readText)
+// Write Text
+const writtenText = fs.writeFileSync("./texts/write.txt",readText + "This is my written text")
 
-console.log(writetext);
+console.log(writtenText);

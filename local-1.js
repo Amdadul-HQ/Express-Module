@@ -7,3 +7,7 @@ const a = 10
 module.exports = {add,a};
 
 // built in module
+
+const path = require('path');
+
+console.log(path.join("/media/amdadul/personal/Learning/Basic_JavaScript/Express/","index.js"));
