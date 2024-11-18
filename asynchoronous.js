@@ -8,7 +8,9 @@ fs.readFile("./texts/read.txt","utf-8",(error,data)=>{
     }
     console.log(data);
     fs.writeFile("./texts/write2.txt",data,"utf-8",(err)=>{
-            throw Error("Error by writeing")
+            if(err){
+                throw Error("Error by writeing")
+            }
     })
     
 })
